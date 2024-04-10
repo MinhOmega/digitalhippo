@@ -2,7 +2,7 @@ import { appRouter } from "@/trpc";
 import { fetchRequestHandler } from "@trpc/server/adapters/fetch";
 import { NextRequest } from "next/server";
 
-export default async function handler(req: NextRequest) {
+const handler = (req: NextRequest) => {
   return fetchRequestHandler({
     endpoint: "/api/trpc",
     req,
@@ -10,4 +10,6 @@ export default async function handler(req: NextRequest) {
     // @ts-expect-error context already passed from express middleware
     createContext: () => ({}),
   });
-}
+};
+
+export { handler as GET, handler as POST };
