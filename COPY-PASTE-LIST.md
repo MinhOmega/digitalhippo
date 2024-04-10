@@ -238,7 +238,7 @@ return res.status(200).send()
         <Section>
         <Column>
             <Img
-            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-email-sent.png`}
+            src={`${process.env.SERVER_URL}/hippo-email-sent.png`}
             width='100'
             height='100'
             alt='DigitalHippo'
@@ -308,7 +308,7 @@ return res.status(200).send()
                 </Text>
                 ) : null}
                 <Link
-                href={`${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${orderId}`}
+                href={`${process.env.SERVER_URL}/thank-you?orderId=${orderId}`}
                 style={productLink}>
                 Download Asset
                 </Link>
@@ -536,7 +536,7 @@ const footerCopyright = {
 <Body style={main}>
     <Container style={container}>
     <Img
-        src={`${process.env.NEXT_PUBLIC_SERVER_URL}/hippo-newsletter-sign-up.png`}
+        src={`${process.env.SERVER_URL}/hippo-newsletter-sign-up.png`}
         width="150"
         height="150"
         alt="DigitalHippo"
